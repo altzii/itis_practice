@@ -1,5 +1,11 @@
 Itis::Application.routes.draw do
+  get "pages/home"
+  get "pages/about"
   resources :posts
+
+  get '/about', to: 'pages#about'
+
+  root "pages#home"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

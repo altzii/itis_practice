@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Itis</title>
+  <title>CROSSPARTY</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+
+
+<%= render 'shared/navbar' %>
 <%= yield %>
+
+
+<style>
+    body {
+        background-image: url(http://cs629527.vk.me/v629527742/caf4/70P9dfGbmDA.jpg);
+    }
+    .center {
+        padding: auto; /* Поля вокруг текста */
+        margin: auto;
+    }
+</style>
 
 </body>
 </html>
