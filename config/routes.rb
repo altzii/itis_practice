@@ -1,9 +1,18 @@
 Itis::Application.routes.draw do
+  devise_for :users
   get "pages/home"
   get "pages/about"
+
   resources :posts
 
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
+
   get '/about', to: 'pages#about'
+  
+
+
 
   root "pages#home"
 
