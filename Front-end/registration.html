@@ -16,20 +16,30 @@
     	<![endif]-->
 
     	<style>
-    		.back{
- 				height: 100vh;
- 				width:900px;
+      	.back {
+          height: 100vh;
+          width:900px;
   				background-color: #f8f8ff;
   				margin:0 auto;
   				padding: auto;
     		}
     		body {
-        		background-image: url(background-doge.png);
+        	background-image: url(background-doge.png);
       		}
+        .center {
+          padding: auto; /* Поля вокруг текста */
+          margin: auto;
+      }
     	</style>
   	</head>
 
   	<body>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/bootstrap.js"></script>
+
+
   		<nav class="navbar navbar-inverse" role="navigation" style="margin:0px 0px 0px 0px">
       		<div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -40,7 +50,7 @@
             			<span class="icon-bar"></span>
             			<span class="icon-bar"></span>
           			</button>
-          			<a class="navbar-brand" href="#">CROSSPARTY</a>
+          			<a class="navbar-brand" href="project.html">CROSSPARTY</a>
         		</div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -53,7 +63,7 @@
             			<div class="row">
             				<div class="col-lg-6" >
               					<div class="input-group"style="width:200px">
-                					<input type="text" class="form-control" placeholder="Search" >
+                					<input type="text" class="form-control" placeholder="Поиск" >
                 					<span class="input-group-btn">
                   						<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
                 					</span>
@@ -63,14 +73,18 @@
           			</form>
           			
           			<ul class="nav navbar-nav navbar-right">
-            			<li> <p> <a class="btn btn-success" type="button" style="margin:8px 5px 0px 5px">Вход</a></p></li>
+            			<li class="btn-group dropdown"> 
+                    <p> <a href="loggingin.html" class="btn btn-success " data-toggle="dropdown" type="button" style="margin:8px 5px 0px 5px">Вход</a></p>
+                
+                  </li>
           			</ul>
         		</div><!-- /.navbar-collapse -->
       		</div><!-- /.container-fluid -->
     	</nav> 
 
   		<div class="back">
-  			<br>
+  			
+        <div class="alert alert-info" style="margin-bottom:10px"><strong style="margin-left:185px">Пройдите быструю регистрацию и подключайтесь к нашему проекту!</strong></div>
   			<form class="form-horizontal" role="form" style="margin:auto; width:400px ">
       			<div class="form-group " style="margin:0px 0 5px 0">
         			<div class="col-sm-9" style="width:100%" >
@@ -102,8 +116,16 @@
           				<input type="password" class="form-control" id="inputPassword" placeholder="Повторите пароль еще раз" >
         			</div>
       			</div>
-      			<button type="button" class="btn btn-primary btn-lg btn-block" style="margin:15px 0 0 15px; width: 92.5%">Зарегистрироваться!</button>
+      			<p><a type="button" class="btn btn-primary btn-lg btn-block" style="margin:15px 0 0 15px; width: 92.5%">Зарегистрироваться!</a></p>
+
+            <img src="http://www.plotnickov-nickita2013.narod.ru/other/memes/slowpoke/slowpoke_1600.png" style="height:200px; width:200px; margin-left:100px">
+            <div class="alert alert-success alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <strong style="margin-left:85px">Этот Slowpoke для тебя :3 </strong>
+            </div>
     		</form>
+
+        
     	</div>
   	</body>
 
