@@ -24,6 +24,8 @@
   <%= @post.updated_at.strftime("%d %b. %Y")%>  <%= "at " %> <%= @post.updated_at.strftime("%H:%M") %>
 </p>
 
+<% if @post.user == current_user %>
 <%= link_to 'Edit', edit_post_path(@post) %> |
+<% end %>
 <%= link_to 'Back', posts_path %>
 
