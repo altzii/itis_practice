@@ -34,10 +34,17 @@
 
         <% if user_signed_in? %>
             <li>
+            <form action="/profile">
+                <button class="btn btn-warning" type="submit" style="margin:8px 5px 5px 5px">Профиль</button>
+              </form>
+            </li>
+
+            <li>
               <form action="/users/sign_out">
                 <button class="btn btn-danger" type="submit" style="margin:8px 5px 5px 5px">Выйти</button>
               </form>
             </li>
+
         <%end%>
 
 

@@ -1,29 +1,69 @@
-<p id="notice"><%= notice %></p>
+<style>
+    .back{
+        height: 100vh;
+        width:900px;
+        background-color: #f8f8ff;
+        margin:0 auto;
+        padding: auto;
+    }
+    .back2 {
+        height: 100vh;
+        width:500px;
+        background-color:#f8f8ff;
+        margin:0 auto;
+        padding: auto;
+        border:2px solid #C3D6E6;
+    }
+    .user-photo{
+        height: 50px;
+        width: 50px;
+        margin:5px 0 0 5px;
+        float:left;
+    }
+    .user-name{
+        float:left;
+        margin:5px 0 0 3px;
+    }
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+    .post-description{
+        margin:5px 2px 0px 2px;
+    }
 
 
-<%= image_tag @post.image.url(:large) %>
+</style>
+
+<div class="back">
+  <a href="">
+    <img class="user-photo img-rounded" <%= image_tag @post.user.avatar.url(:thumb) %>
+  </a>
+  <a href="">
+    <h4 class="user-name"><span class="label label-primary user-name" ><%=@post.user.username%></span></h4>
+  </a>
+  <div class="back2">
+    <h1 class="well well-sm" style="margin:0px 0 0px 2px"><%=@post.text%></h1>
+
+    <p class="post-description"><%=@post.text%></p>
 
 
-<p>
-  <strong>Text:</strong>
-  <%= @post.text %>
-</p>
+    <%= image_tag(@post.image.url(:large), :class => "post-img") %>
 
-<p>
-  <strong>Created:</strong>
-  <%= @post.created_at.strftime("%d %b. %Y")%>  <%= "at " %> <%= @post.created_at.strftime("%H:%M") %>
-</p>
+    <p>Создан: <%= @post.created_at.strftime("%d %b. %Y")%>  <%= "at " %> <%= @post.created_at.strftime("%H:%M") %></p>
 
-<p>
-  <strong>Updated:</strong>
-  <%= @post.updated_at.strftime("%d %b. %Y")%>  <%= "at " %> <%= @post.updated_at.strftime("%H:%M") %>
-</p>
+    <% if @post.user == current_user %>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+    <p>
+
+      <%= button_to "Редактировать", edit_post_path(@post) ,
+                    :class => "btn btn-info btn-xs", :style=> "float:left; margin:0 5px 0 0", :method => :get %>
+
+      <%= button_to "Удалить", @post, data: { confirm: 'Are you sure?' },
+                    :class => "btn btn-danger btn-xs", :style=>"float:left; margin:0 5px 0 0", :method => :delete %>
+    </p>
+
+        <% end %>
+
+
+
+  </div>
+</div>
 
