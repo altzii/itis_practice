@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
-    <title>CROSSPARTY</title>
+    <title>CROSSPARTY|Профиль</title>
 
     
     <!-- Bootstrap -->
@@ -18,50 +18,23 @@
     <![endif]-->
 
     <style>
-        .back{
-          height: 100vh;
-          width:900px;
-          background-color: #f8f8ff;
-          margin:0 auto;
-          padding: auto;
-        }
-        .back2 {
-          height: 100vh;
-          width:500px;
-          background-color:#f8f8ff;
-          margin:0 auto;
-          padding: auto;
-          border:2px solid #C3D6E6;
-        }
-        .user-photo{
-          height: 50px;
-          width: 50px;
-          margin:5px 0 0 5px;
-          float:left;
-        }
-        .user-name{
-          float:left;
-          margin:5px 0 0 3px;
-        }
-        .post-img{
-          max-width: 490px;
-          margin: 5px 2px 0 2px;
-        }
-        .post-description{
-          margin:0px 2px 0px 2px;
-        }
-        .pubtime{
-          
-          font-family: tahoma;
-          font-size: 13px;
-          margin:2px 2px 0px 2px
-        }
-        #redex { resize: none; }
-        body {
-            background-image: url(background-doge.png);
-        }
-        
-      </style>
+      .back{
+        height: 100vh;
+        width:900px;
+        background-color: #f8f8ff;
+        margin:0 auto;
+        padding: auto;
+      }
+      body {
+        background-image: url(background-doge.png);
+      }
+      .avatar {
+        float: left;
+        height:30%;
+        max-width: 30%;
+
+      }
+    </style>
   </head>
   <body>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -103,39 +76,21 @@
 
           <ul class="nav navbar-nav navbar-right">
             <li>
-                <p><a href="#" class="btn btn-warning" style="margin:8px 5px 0px 5px">Профиль</a></p>              
+                <p><a href="#" class="btn btn-primary" style="margin:8px 5px 0px 5px">Посты</a></p>              
             </li>
             <li><p> <a href="project.html" class="btn btn-danger" type="button" style="margin:8px 5px 0px 5px">Выйти</a></p></li>
           </ul>
           
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
-    </nav>  
+    </nav>
 
     <div class="back">
-      <a href="#">
-        <img class="user-photo img-rounded" src="https://pp.vk.me/c623218/v623218676/28e68/qpiGQdRgJbk.jpg" alt="hi" >
-      </a>
-      <a href="#">
-        <h4 class="user-name"><span class="label label-primary user-name" >username</span></h4>
-      </a>
-      <div class="back2">
-        <h1 class="well well-sm" style="margin:0px 0 0px 2px">Название</h1>
-        <p class="post-description">Описание поста</p>
-        <img class="post-img" src="https://pp.vk.me/c623218/v623218676/28e68/qpiGQdRgJbk.jpg">
-        <p class="pubtime"> 
-          <script LANGUAGE="JavaScript">temp_date = new Date();day = temp_date.getDate();hours = temp_date.getHours();minutes = temp_date.getMinutes(); month = temp_date.getMonth() + 1;year = temp_date.getFullYear();if (day < 10) {day = "0" + day;}if (month <10) {month = "0" + month;}document.write(hours + ":" + minutes + " " + day + "." + month + "." + year );</SCRIPT>
-        </p>
-        <div class="row" style="margin:5px 0 5px 0" "btn-group">
-          <p style="margin:0 0 0"><a href="#" class="btn btn-info btn-xs" style="float:left; margin:0 5px 0 0">Редактировать</a></p>
-          <p><a href="#" class="btn btn-danger btn-xs" style="float:left">Удалить</a></p>
-        </div>
-
-        <textarea  rows="3" maxlenght="10"></textarea>
-        <br>
-        <button class="btn btn-primary" type="button"  >Отправить</button>
-      </div>
+      <img src="https://pp.vk.me/c623218/v623218676/28e68/qpiGQdRgJbk.jpg" class="avatar img-rounded">
     </div>
 
+
   </body>
-</html>
+
+
+</html> 
