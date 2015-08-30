@@ -47,6 +47,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     if current_user.id == @post.user.id
 
+<<<<<<< HEAD
      respond_to do |format|
 
       if @post.update(post_params)
@@ -55,6 +56,17 @@ class PostsController < ApplicationController
       else
         format.html { render action: 'edit' }
         format.json { render json: @post.errors, status: :unprocessable_entity }
+=======
+      respond_to do |format|
+
+        if @post.update(post_params)
+          format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+          format.json { head :no_content }
+        else
+          format.html { render action: 'edit' }
+          format.json { render json: @post.errors, status: :unprocessable_entity }
+        end
+>>>>>>> back-end-sasha
       end
      end
     end

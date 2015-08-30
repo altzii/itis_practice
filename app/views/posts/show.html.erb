@@ -47,6 +47,7 @@
 
     <%= image_tag(@post.image.url(:large), :class => "post-img") %>
 
+
     <p>Создан: <%= @post.created_at.strftime("%d %b. %Y")%>  <%= "at " %> <%= @post.created_at.strftime("%H:%M") %></p>
 
     <% if @post.user == current_user %>
@@ -66,5 +67,6 @@
 
   </div>
 </div>
+
 
 
