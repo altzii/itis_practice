@@ -1,35 +1,87 @@
- <h2>Sign up</h2>
+<style>
+    .back {
+        height: 100vh;
+        width:900px;
+        background-color: #f8f8ff;
+        margin:0 auto;
+        padding: auto;
+    }
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    .center {
+        padding: auto; /* Поля вокруг текста */
+        margin: auto;
+    }
+</style>
+
+<div class="back">
+
+  <div class="alert alert-info" style="margin-bottom:10px"><strong style="margin-left:185px">Пройдите быструю регистрацию и подключайтесь к нашему проекту!</strong></div>
+
+ <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:class => "form-horizontal center", :style =>"margin:auto; width:400px" }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <p><%= f.label :username %><br />
-      <%= f.text_field :username %></p>
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-    <p><%= f.label :first_name%><br />
-      <%= f.text_field :first_name %></p>
-    <p><%= f.label :last_name %><br />
-      <%= f.text_field :last_name %></p>
-  </div>
+      <div class="form-group" style="margin:0px 0 5px 0">
+        <div class="col-md-9" style="width:100%" >
+          <%= f.text_field :username, class: "form-control", :placeholder => "Придумайте ник" %>
+        </div>
+      </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
+      <div class="form-group" style="margin:0px 0 5px 0">
+        <div class="col-md-9" style="width:100%" >
+          <%= f.text_field :first_name, class: "form-control", :placeholder => "Введите имя" %>
+        </div>
+      </div>
+
+      <div class="form-group" style="margin:0px 0 5px 0">
+        <div class="col-md-9" style="width:100%" >
+          <%= f.text_field :last_name, class: "form-control", :placeholder => "Введите фамилию" %>
+        </div>
+      </div>
+
+      <div class="form-group" style="margin:0px 0 5px 0">
+        <div class="col-md-9" style="width:100%" >
+          <%= f.text_field :email, class: "form-control", :placeholder => "Введите email" %>
+        </div>
+      </div>
+
+      <div class="form-group" style="margin:0px 0 5px 0">
+        <div class="col-md-9" style="width:100%" >
+          <%= f.password_field :password, autocomplete: "off", class: "form-control", :placeholder  => "Придумайте пароль (минимум 8 символов)" %>
+        </div>
+      </div>
+
+      <div class="form-group" style="margin:0px 0 5px 0">
+        <div class="col-md-9" style="width:100%" >
+          <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", :placeholder  => "Повторите пароль еще раз" %>
+        </div>
+      </div>
+
+      <%= f.submit "Зарегистрироваться", class: "btn btn-primary btn-lg btn-block", style:"margin:15px 0 0 15px; width: 92.5%" %>
+
+      <img src="http://www.plotnickov-nickita2013.narod.ru/other/memes/slowpoke/slowpoke_1600.png" style="height:200px; width:200px; margin-left:100px">
+
+      <div class="alert alert-success alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <strong style="margin-left:85px">Этот Slowpoke для тебя :3 </strong>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
 <% end %>
 
-<%= render "devise/shared/links" %>
+</div>
+
+
+
+
