@@ -31,9 +31,19 @@
       .avatar {
         float: left;
         height:30%;
-        max-width: 30%;
+        margin: 5px 0 0 5px;
 
       }
+      .profile-description {
+        float: right;
+        width: 65%;
+        margin: 5px 5px 0 5px;
+      }
+      .profile-name{
+        float: left;
+        margin:0px 0 5px 0;
+      }
+
     </style>
   </head>
   <body>
@@ -86,9 +96,31 @@
     </nav>
 
     <div class="back">
+      
       <img src="https://pp.vk.me/c623218/v623218676/28e68/qpiGQdRgJbk.jpg" class="avatar img-rounded">
+      <div class="profile-description">
+        
+        <h2 class="well well-sm profile-name">Александр Леонтьев</h2>
+        <br><br>
+        <h3><span class="profile-name label label-primary label-lg">alt</span></h3>
+        <br><br>
+        <div class="panel panel-warning">
+          <div class="panel-heading">О себе</div>
+            <div class="panel-body">
+              Описание профиля
+            </div>
+          </div>
+        </div>
+        <ul class="nav nav-tabs">
+          <li class="active">
+            <a href="profile.html">Профиль</a>
+          </li>
+          <li><a href="#">Избранное</a></li>
+          <li><a href="#">Настройка</a></li>
+        </ul>
+      </div>
+      
     </div>
-
 
   </body>
 
